@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/pages/page4.dart';
 
 class Page3 extends StatelessWidget {
-  const Page3({super.key});
+  String? name;
+  List<String>? countryName = [];
+  Page3({required this.name, required this.countryName});
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +14,19 @@ class Page3 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              height: 250,
+              width: double.infinity,
+              color: Colors.blueGrey,
+              child: Text(
+                "$name \n $countryName",
+                textScaleFactor: 2,
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             MaterialButton(
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               shape: RoundedRectangleBorder(
@@ -20,7 +36,13 @@ class Page3 extends StatelessWidget {
                 "Next",
                 style: TextStyle(fontSize: 30),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Page4(
+                          name: name,
+                          countryName: countryName,
+                        )));
+              },
             ),
             SizedBox(
               height: 10,
@@ -34,7 +56,9 @@ class Page3 extends StatelessWidget {
                   "Back",
                   style: TextStyle(fontSize: 30),
                 ),
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
           ],
         ),
       ),
