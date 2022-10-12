@@ -24,9 +24,9 @@ class _Page2State extends State<Page2> {
             Container(
               height: 250,
               width: double.infinity,
-              color: Colors.blueGrey,
+              color: Colors.blue,
               child: Text(
-                "${widget.name}\n ${widget.countryName}",
+                "${widget.name}\n\n ${widget.countryName}",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
               ),

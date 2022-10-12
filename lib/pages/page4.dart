@@ -21,7 +21,7 @@ class Page4 extends StatelessWidget {
               width: double.infinity,
               color: Colors.blueGrey.shade100,
               child: Text(
-                "$name \n $countryName",
+                "$name \n\n $countryName",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
               ),

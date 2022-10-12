@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Page5 extends StatelessWidget {
-String? name;
+  String? name;
   List<String>? countryName = [];
   Page5({required this.name, required this.countryName});
 
@@ -16,9 +16,9 @@ String? name;
             Container(
               height: 250,
               width: double.infinity,
-              color: Colors.blueGrey,
+              color: Colors.green,
               child: Text(
-                "$name \n $countryName",
+                "$name \n\n $countryName",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
               ),

@@ -12,7 +12,7 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Page-1 $title")),
+      appBar: AppBar(title: Text("Page-1 ")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +22,7 @@ class Page1 extends StatelessWidget {
               width: double.infinity,
               color: Colors.blueGrey,
               child: Text(
-                "$title",
+                "$title \n\n $countryName",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
               ),

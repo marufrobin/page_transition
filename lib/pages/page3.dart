@@ -17,9 +17,9 @@ class Page3 extends StatelessWidget {
             Container(
               height: 250,
               width: double.infinity,
-              color: Colors.blueGrey,
+              color: Colors.deepOrange,
               child: Text(
-                "$name \n $countryName",
+                "$name \n\n $countryName",
                 textScaleFactor: 2,
                 textAlign: TextAlign.center,
               ),
